@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProjectDB" Class="ProjectDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MSI\SQLEXPRESS;Initial Catalog=ProjectDB;Integrated Security=True" SettingsObjectName="Project.Properties.Settings" SettingsPropertyName="ProjectDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.FamilyTrees" Member="FamilyTrees">
+    <Type Name="FamilyTrees">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FamilyName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FamilyTree" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>
