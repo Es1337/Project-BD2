@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Project;
+using System;
 
 namespace DatabaseTests
 {
@@ -130,19 +131,18 @@ namespace DatabaseTests
         }
 
         [TestMethod]
-        public void Test7_DeletePerson_WhenDoesntExist_()
+        public void Test8_DeletePerson_WhenDoesntExist_ShoudlThrowInvalidOperation()
         {
             string familyName = "Test Family";
             string expectedName = "Test";
             string expectedSurname = "Person4";
 
-            bool success = controller.DeletePersonByName(familyName, expectedName, expectedSurname);
-
-            Assert.AreEqual(true, success);
+            Assert.ThrowsException<InvalidOperationException>(() =>
+                controller.DeletePersonByName(familyName, expectedName, expectedSurname));
         }
 
         [TestMethod]
-        public void Test8_DeleteFamilyTree_DeletesProperly()
+        public void Test9_DeleteFamilyTree_DeletesProperly()
         {
             string familyName = "Test Family";
 

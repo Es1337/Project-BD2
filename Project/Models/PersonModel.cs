@@ -33,41 +33,5 @@ namespace Project
             this.mother = setMother;
             this.father = setFather;
         }
-
-        public PersonModel(XElement setNode, int setID, string setNames, string setSurname)
-        {
-            this.node = setNode;
-            this.id = setID;
-            this.names = setNames;
-            this.surname = setSurname;
-            this.born = "";
-            this.died = "";
-            this.mother = -1;
-            this.father = -1;
-        }
-
-        public PersonModel(XElement setNode, int setID, string setNames, string setSurname, string setBorn)
-        {
-            this.node = setNode;
-            this.id = setID;
-            this.names = setNames;
-            this.surname = setSurname;
-            this.born = setBorn;
-            this.died = "";
-            this.mother = -1;
-            this.father = -1;
-        }
-
-        public PersonModel(XElement setNode, int setID, string setNames, string setSurname, string setBorn, int setMother, int setFather)
-        {
-            this.node = setNode;
-            this.id = setID;
-            this.names = setNames;
-            this.surname = setSurname;
-            this.born = setBorn;
-            this.died = "";
-            this.mother = setMother;
-            this.father = setFather;
-        }
     }
 }
